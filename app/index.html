@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Emberiae</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/emberiae.css">
+  </head>
+  <body>
+    <script>
+      window.EmberiaeENV = {{ENV}};
+      window.EmberENV = window.EmberiaeENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/emberiae.js"></script>
+    <script>
+      window.Emberiae = require('emberiae/app')['default'].create(EmberiaeENV.APP);
+    </script>
+  </body>
+</html>
